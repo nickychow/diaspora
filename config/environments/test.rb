@@ -37,8 +37,6 @@ Diaspora::Application.configure do
   config.assets.enabled = true
   config.assets.debug = false
 
-  # Allow pass debug_assets=true as a query parameter to load pages with unpackaged assets
-  config.assets.allow_debugging = true
 
   # fixes url helper issue in rspec
   #config.threadsafe!
