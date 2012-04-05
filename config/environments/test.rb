@@ -30,6 +30,9 @@ Diaspora::Application.configure do
   config.action_mailer.delivery_method = :test
   config.active_support.deprecation = :stderr
 
+  config.active_record.mass_assignment_sanitizer = :strict
+
+
   # Configure static asset server for tests with Cache-Control for performance
   config.serve_static_assets = true
   config.static_cache_control = "public, max-age=3600"
