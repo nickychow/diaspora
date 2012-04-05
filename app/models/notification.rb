@@ -7,7 +7,8 @@ class Notification < ActiveRecord::Base
   has_many :notification_actors, :dependent => :destroy
   has_many :actors, :class_name => 'Person', :through => :notification_actors, :source => :person
   belongs_to :target, :polymorphic => true
-
+  attr_accessor :note_html
+  
   def self.for(recipient, opts={})
     self.where(opts.merge!(:recipient_id => recipient.id)).order('updated_at desc')
   end
